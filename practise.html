@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/prac.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="action">
+        <div class="profile" onclick="">
+            <img src="images/menu.png" width="30px" height="30px">
+        </div>
+        <div class="menu">
+            <h3>hello world</h3>
+            <ul>
+                <li><img src="images/user.png"><a href="#">My Profile</a></li>
+                <li><img src="images/home.png"><a href="myproperty.php">My Property</a></li>
+                <li><img src="images/shortlist.png"><a href="#">Shortlist</a></li>
+                <li><img src="images/serv.jpg"><a href="myservices.php">My services</a></li>
+                <li><img src="images/logout.png"><a href="#">Log out</a></li>
+                
+            </ul>
+        </div>
+    </div>
+    <script type="text/JavaScript">
+        function menutoggle(){
+            const togglemenu=document.querySelector('.menu');
+            togglemenu.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

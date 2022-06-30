@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Property Website</title>
+<link rel="stylesheet" href="css/sellerform.css">
+<link rel="stylesheet" href="css/navbar.css">
+</head>
+<body>
+    <div class="total">
+        <div class="navbar">
+            <div class="c1">
+                <img src="images/logo.png">
+            </div>
+            <nav>
+                 <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Account</a></li>
+                </ul>
+            </nav>
+            <button onclick="menutoggle()" class="dropbtn"></button>
+        </div>
+        <div id="myDropdown" class="dropdown-content menu active">
+            <ul>
+               <li><img src="images/user.png"><a href="#">My Profile</a></li>
+               <li><img src="images/home.png"><a href="myproperty.php">My Property</a></li>
+               <li><img src="images/shortlist.png"><a href="#">Shortlist</a></li>
+               <li><img src="images/serv.jpg"><a href="myservices.php">My services</a></li>
+               <li><img src="images/logout.png"><a href="login page.html">Log out</a></li>
+            </ul>
+         </div>
+        <div class="box">
+            <div class="col1">
+                <h1>Sell or Rent</h1>
+                <h1>Your Property</h1>
+                <img src="images/pic2.png">
+            </div>
+            <div class="col2">
+                <div class="form">
+                    <div class="card">
+                        <h2>Property Details</h2>
+                        <div class="inner">
+                            <div class="card-front">
+                                <form method="POST" action="selling.php">
+                                    <div class="phonenumber">
+                                        <label for="phone" class="l1" style="color: black; font-weight: bold;">Phone no</label>
+                                    <br>
+                                    <input type="text" class="phone" name="phone" placeholder="mobile no" required> 
+                                    <br>
+                                    </div>
+                                    <div class="radio" required>
+                                        <p style="color: black; margin:20px 0 0 20px; font-weight: bold;">You're looking to...</p>
+                                        <ul class=" room mb-0 mt-4 pl-0">
+                                            <li id="sellBtn" >
+                                                <input type='radio' value='Sell' name='radio' id='Sell' />
+                                                <label id="sellBtn" class="" for='Sell'>Sell</label>
+                                            </li>
+                                            <li id="rentBtn" class="">
+                                                <input type='radio' value='rent' name='radio' id='rent' />
+                                                <label for='rent'>Rent</label>
+                                            </li>
+                                            <li id="leaseBtn" class="">
+                                                <input type='radio' value='lease' name='radio' id='lease' />
+                                                <label for='lease'>lease</label>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="r1 required">
+                                        <label class="la1" for="type" style="color: black; font-weight: bold;">select type:</label>
+                                        <ul class=" room mb-0 mt-4 pl-0">
+                                            <li id="1BHK" >
+                                                <input type='radio' value='1BHK' name='Details' id='t1' />
+                                                <label id="1BHK" for='t1'>1BHK</label>
+                                            </li>
+                                            <li id="2BHK" >
+                                                <input type='radio' value='2BHK' name='Details' id='t2' />
+                                                <label id="2BHK" for='t2'>2BHK</label>
+                                            </li>
+                                            <li id="3BHK" >
+                                                <input type='radio' value='3BHK' name='Details' id='t3' />
+                                                <label id="3BHK" for='t3'>3BHK</label>
+                                            </li>
+                                            <li id="4BHK" >
+                                                <input type='radio' value='4BHK' name='Details' id='t4' />
+                                                <label id="4BHK" for='t4'>4BHK</label>
+                                            </li>
+                                            <li id="villa" >
+                                                <input type='radio' value='villa' name='Details' id='t5' />
+                                                <label id="villa" for='t5'>villa/independent house</label>
+                                            </li>
+                                            <li id="farm" >
+                                                <input type='radio' value='farm house' name='Details' id='t6' />
+                                                <label id="farm" for='t6'>farm house</label>
+                                            </li>
+                                            <li id="land" >
+                                                <input type='radio' value='land' name='Details' id='t7' />
+                                                <label id="land" for='t7'>land</label>
+                                            </li>
+                                            <li id="office" >
+                                                <input type='radio' value='office' name='Details' id='t8' />
+                                                <label id="office" for='t8'>office</label>
+                                            </li>
+                                            <li id="store" >
+                                                <input type='radio' value='store' name='Details' id='t9' />
+                                                <label id="t9" for='t9'>store</label>
+                                            </li>
+    
+                                        </ul>
+                                    </div>
+                                    <br>
+                                    <input type="submit" name="sellerform" class="submit" value="Begin to post">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    function menutoggle() {
+           document.getElementById("myDropdown").classList.toggle("show");
+         }
+         window.onclick = function(event) {
+            if (!event.target.matches('.dropbtn')) {
+               var dropdowns = document.getElementsByClassName("dropdown-content");
+               var i;
+               for (i = 0; i < dropdowns.length; i++) {
+                  var openDropdown = dropdowns[i];
+                  if (openDropdown.classList.contains('show')) {
+                     openDropdown.classList.remove('show');
+                  }
+               }
+            }
+         }
+ </script>
+</html>
