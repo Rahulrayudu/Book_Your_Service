@@ -1,0 +1,27 @@
+.table{
+    width: 1400px;
+    box-shadow:0 0 30px 30px rgba(0,0,0,0.1);
+    margin: 50px 0 0 60px;
+    border-radius: 12px;
+}
+
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border-radius: 12px;
+    
+  }
+  
+ 
+  th, td {
+    text-align: center;
+    padding: 8px;
+  }
+  
+  td{
+      height: 80px;
+  }
+  
+  .ta1 tr:nth-child(even){background-color: #f2f2f2}
